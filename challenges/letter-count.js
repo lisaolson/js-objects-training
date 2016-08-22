@@ -1,3 +1,24 @@
+
+var letterCount = function(string) {
+  var obj = {};
+
+for(var i = 0; i < string.length; i++) {
+  var letter = string(i);
+  var count = 1;
+
+if(!(letter in obj)) {
+
+  for(var j = i+1; j < string.length; j++)
+  if (string(j) === letter) {
+    count++;
+  }
+}
+obj[letter] = count;
+}
+}
+return obj;
+}
+letterCount("Letters");
 /*
 
   Create a function `letterCount` that accepts a string, and finds the number of times each letter
