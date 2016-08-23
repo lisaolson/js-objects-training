@@ -1,5 +1,4 @@
-
-var letterCount = function(string) {
+function letterCount(string) {
   var obj = {};
 
 for(var i = 0; i < string.length; i++) {
@@ -16,7 +15,7 @@ if(!(letter in obj)) {
 obj[letter] = count;
 }
 }
-return obj;
+return obj();
 }
 letterCount("Letters");
 /*
